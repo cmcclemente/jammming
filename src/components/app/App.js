@@ -108,6 +108,12 @@ class App extends Component {
       ]
     };
   }
+  
+  addTrack = (track) => {
+    if (this.state.playlistTracks.find(savedTrack => savedTrack.id === track.id)) {
+      return;
+    }
+  }
 
   render() {
     const { searchResults, playlistName, playlistTracks } = this.state;
@@ -120,7 +126,7 @@ class App extends Component {
         <div className='App'>
           <SearchBar />
           <div className='App-playlist'>
-            <SearchResults searchResults={searchResults} />
+            <SearchResults searchResults={searchResults} onAdd={this.addTrack} />
             <Playlist
               playlistName={playlistName}
               playlistTracks={playlistTracks}
