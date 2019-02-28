@@ -3,7 +3,7 @@ import './Track.css';
 
 class Track extends Component {
   renderAction = () => {
-    let isRemoval = true;
+    let isRemoval = false;
     if (isRemoval) {
       return `-`;
     } else {
@@ -21,7 +21,7 @@ class Track extends Component {
             {artist} | {album}
           </p>
         </div>
-        <a className='Track-action'>{this.renderAction}</a>
+        <a className='Track-action'>{this.renderAction()}</a>
       </div>
     );
   }
