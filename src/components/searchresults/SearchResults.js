@@ -8,7 +8,7 @@ class SearchResults extends Component {
     return (
       <div className='SearchResults'>
         <h2>Results</h2>
-        <TrackList tracks={searchResults} onAdd={onAdd} isRemoval='false'/>
+        <TrackList tracks={searchResults} onAdd={onAdd} isRemoval='false' />
       </div>
     );
   }
